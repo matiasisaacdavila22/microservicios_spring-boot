@@ -1,0 +1,56 @@
+start.spring.io
+
+
+***SELECT:
+1-gradleProject
+2-java
+3-spring boot 2.53
+
+***COMPLITE METADATA:
+	***example** 
+group: academy.digitallab.store
+artefact : service-customer
+package name: academy.digitallab.store.customer
+options:
+	jar
+	java 11
+
+***DEPENDECIES***
+
+1-spring web
+2-spring data jpa
+3-h2 database
+4-lombok
+5-spring boot actuator
+6-config cliente
+7-Eureka Discovery client
+8-Sleuth
+9-implementation 'org.springframework.boot:spring-boot-starter-validation'
+***implemetar la clase de message formtaeado***
+server:
+  port: 8091
+  error:
+    include-message: always
+    include-binding-errors: always
+
+click en generate
+
+ setting -> build,Execution.Deploment -> compiler-> Anotation Processions: Enable annotation Procession (checkbox)
+ project structure ->project : 11
+                   ->module : 11  
+                   ->SDKS : 11  
+
+
+error****H2**org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "TBL_CATEGORIES" no encontrada
+
+este problema Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "TBL_CATEGORIES" no encontrada 
+Table "TBL_CATEGORIES" not found; SQL statement: Lo mas Probable es porque están usando SpringFramework 2.
+5.0 o superior, desde esa versión por defecto esta des-habilitada la inicialización de comandos SQL básicos, 
+por ende solo deben colocar en el application.properties la siguiente sentencia 
+spring.jpa.defer-datasource-initialization=true Y listo!!!
+Fuente: docs.spring.io/spring-boot/docs/current/reference/html/howto.html
+
+
+
+
+

@@ -1,0 +1,26 @@
+https://www.youtube.com/watch?v=U_rPO2ILMFU&list=PLxy6jHplP3Hi_W8iuYSbAeeMfaTZt49PW&index=2
+
+ project structure ->project : 11
+                   ->module : 11  
+                   ->SDKS : 11  
+
+***FIRST MS***
+
+DEPENDENCIAS
+
+-Spring Web
+-Spring Data JPA
+-H2 Database
+-Lombok       // setting -> build,Execution.Deploment -> compiler-> Anotation Processions: Enable annotation Procession (checkbox)
+-Spring Boot Actuator
+-Config Client
+-Eureka Discovery Client
+-Sleuth
+
+error****H2**org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "TBL_CATEGORIES" no encontrada
+este problema Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "TBL_CATEGORIES" no encontrada 
+Table "TBL_CATEGORIES" not found; SQL statement: Lo mas Probable es porque están usando SpringFramework 2.
+5.0 o superior, desde esa versión por defecto esta des-habilitada la inicialización de comandos SQL básicos, 
+por ende solo deben colocar en el application.properties la siguiente sentencia 
+spring.jpa.defer-datasource-initialization=true Y listo!!!
+Fuente: docs.spring.io/spring-boot/docs/current/reference/html/howto.html

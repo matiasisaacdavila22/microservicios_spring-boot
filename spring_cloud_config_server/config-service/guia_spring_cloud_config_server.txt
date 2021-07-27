@@ -1,0 +1,22 @@
+start.spring.io
+
+
+***SELECT:
+1-gradleProject
+2-java
+3-spring boot 2.53
+
+***COMPLITE METADATA:
+	***example** 
+group: academy.digitallab.store
+artefact : config-service
+description: string cloud config server
+package name: academy.digitalab.store.config
+options:
+	jar
+	java 11
+
+***DEPENDECIES***
+
+1-spring web
+2-spring data jpa
