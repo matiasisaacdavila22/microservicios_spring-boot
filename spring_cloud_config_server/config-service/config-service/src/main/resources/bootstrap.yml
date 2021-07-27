@@ -5,5 +5,13 @@ spring:
   cloud:
     config:
       server:
-        git:1
+        git:
+          url:https://github.com/matiasisaacdavila22/microservicios_spring-boot.git
+          searchPath: config-data
+          username: ${GIT_USER}
+          password: ${GIT_PASSWORD}
+  security:
+      user:
+         name: root
+           password: s3cr3t
 
