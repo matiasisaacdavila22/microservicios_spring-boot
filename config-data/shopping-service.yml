@@ -54,3 +54,7 @@ hystrix:
   dashboard:
     #You can also specify a specific domain name | ip
     proxy-stream-allow-list: "*"        
+ ribbon:
+    enabled: true
+  circuitbreaker:
+    enabled: true    
