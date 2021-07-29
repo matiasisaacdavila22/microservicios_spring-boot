@@ -41,5 +41,7 @@ public class Product {
     @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
     private Category category;
 
+    @Transient 
+    private Integer port;
 
 }

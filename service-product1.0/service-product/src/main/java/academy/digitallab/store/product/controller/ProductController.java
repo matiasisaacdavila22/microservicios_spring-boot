@@ -7,7 +7,9 @@ import academy.digitallab.store.product.service.ProductService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.catalina.LifecycleState;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -24,6 +26,9 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping(value = "/products")
 public class ProductController {
+
+    @Autowired
+    private Environment env;
 
     @Autowired //injeccion de dependency
     private ProductService productService;
@@ -51,6 +56,7 @@ public class ProductController {
         if( null == product){
             return ResponseEntity.notFound().build();
         }
+        product.setPort(Integer.parseInt(env.getProperty("local.server.port")));
         return ResponseEntity.ok(product);
     }
 

@@ -20,4 +20,5 @@ public class Product {
     private String status;
     private Date createAt;
     private Category category;
+    private Integer port;
 }
