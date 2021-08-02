@@ -42,7 +42,8 @@ dependencies {
 
 dependencyManagement {
 	imports {
-		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Greenwich.SR6"
+		//${springCloudVersion}
 	}
 }
 
