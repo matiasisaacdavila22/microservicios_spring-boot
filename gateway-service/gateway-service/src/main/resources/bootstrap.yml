@@ -3,6 +3,6 @@ spring:
     name: gateway-service
   cloud:
     config:
-      uri: http://localhost:8082 // mi config service es 8082 atenti!!
+      uri: http://localhost:8082
       username: root
       password: s3cr3t
