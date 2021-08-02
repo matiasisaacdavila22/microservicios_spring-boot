@@ -45,13 +45,17 @@ eureka:
 Feign:
   hystrix:
     enabled: true
+  ribbon:
+    enabled: true
+  circuitbreaker:
+    enabled: true  
 management:
   endpoints:
     web:
       exposure:
         include: "*"
-hystrix:
-  dashboard:
+  hystrix:
+    dashboard:
     #You can also specify a specific domain name | ip
-    proxy-stream-allow-list: "*"        
+      proxy-stream-allow-list: "*"        
    
