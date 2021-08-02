@@ -42,20 +42,10 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8099/eureka/     
-Feign:
+feign:
   hystrix:
     enabled: true
-  ribbon:
-    enabled: true
-  circuitbreaker:
-    enabled: true  
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  hystrix:
-    dashboard:
-    #You can also specify a specific domain name | ip
-      proxy-stream-allow-list: "*"        
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"       
    
